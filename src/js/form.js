@@ -2,16 +2,6 @@
 
 
 let url = "https://uppgift2-1.onrender.com/api/workexperience";
-/*
-getData();
-
-async function getData() {
-    const response = await fetch(url);
-
-    const data = await response.json();
-
-    console.log(data);
-}*/
 
 const submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click", submitForm)
@@ -64,21 +54,4 @@ async function createWorkexperience(companyname, jobtitle, location, startdate, 
     const data = await response.json();
     console.log(data);
 
-}
-
-async function deleteWorkexperience(id) {
-    const deleteUrl = `${url}/${id}`
-
-    fetch(deleteUrl, {
-        method: "DELETE"
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Fel vid radering av jobberfarenhet med id ${id}.`);
-            }
-            console.log(`Jobberfarenhet med id ${id} har raderats`);
-        })
-        .catch(error => {
-            console.error("Fel vid radering:" + error)
-        })
 }
