@@ -3,8 +3,6 @@
 
 let url = "https://uppgift2-1.onrender.com/api/workexperience";
 getData();
-//deleteWorkexperience(10);
-//createWorkexperience("RTMD", "Brandman", "Västerås", "2017-06-01", "2023-10-01", "Brandman och räddningsdykare")
 
 async function getData() {
     const response = await fetch(url);
@@ -12,6 +10,30 @@ async function getData() {
     const data = await response.json();
 
     console.log(data);
+}
+
+const submitBtn = document.getElementById("submitBtn");
+submitBtn.addEventListener("click", submitForm)
+
+//Funktion för att lägga till data till API/server från formuläret
+function submitForm() {
+    const form = document.getElementById("workexperienceForm");
+    const formData = new FormData(form);
+
+    //Hämtar värdena från formulärets olika inputfält
+    const companyname = formData.get("companyname");
+    const jobtitle = formData.get("jobtitle");
+    const location = formData.get("location");
+    const startdate = formData.get("startdate");
+    const enddate = formData.get("enddate");
+    const description = formData.get("description");
+
+    if (!companyname.trim() || !jobtitle.trim() || !location.trim() || !startdate.trim() || !description.trim()) {
+        console.log("Här saknas det något...")
+        return;
+    }
+
+    createWorkexperience(companyname, jobtitle, location, startdate, enddate, description);
 }
 
 async function createWorkexperience(companyname, jobtitle, location, startdate, enddate, description) {
