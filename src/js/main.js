@@ -45,7 +45,7 @@ async function deleteWorkexperience(id) {
         });
 
         if (response.ok) {
-            // Remove the article from the DOM
+            // Tar bort articlen
             const articleToDelete = document.querySelector(`article[data-id="${id}"]`);
             if (articleToDelete) {
                 articleToDelete.remove();
