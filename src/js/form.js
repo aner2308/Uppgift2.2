@@ -11,6 +11,9 @@ function submitForm() {
     const form = document.getElementById("workexperienceForm");
     const formData = new FormData(form);
 
+    //Hämta väg till felmeddelande
+    const errorMsgEl = document.getElementById("errorMsg");
+
     //Hämtar värdena från formulärets olika inputfält
     const companyname = formData.get("companyname");
     const jobtitle = formData.get("jobtitle");
@@ -21,7 +24,10 @@ function submitForm() {
 
     if (!companyname.trim() || !jobtitle.trim() || !location.trim() || !startdate.trim() || !description.trim()) {
         console.log("Här saknas det något...")
+        errorMsgEl.innerText = "*Vänligen fyll i alla obligatoriska fält.";
         return;
+    } else {
+        errorMsgEl.innerText = ""; // Töm felmeddelandet om alla fält är ifyllda korrekt
     }
 
     //Använder formulärdatan och kör den i funktionen createWorkexperience

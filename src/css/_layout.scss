@@ -188,10 +188,14 @@ form {
         background-color: #79a54d;
         color: white;
     }
-
 }
 
-
+#errorMsg {
+    max-width: 400px;
+    margin: 10px auto;
+    font-size: 1.2em;
+    color: #d00d0d;
+  }
 
 
 @media screen and (max-width: 610px) {

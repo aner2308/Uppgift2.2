@@ -23,22 +23,24 @@
     <main>
         <h1>Lägg till</h1>
         <p class="brödtext">Fyll i formuläret och tryck på skicka för att registrera ny jobberfarenhet. Vid lyckad registrering hamnar din nya erfarenhet på Jobbsidan.</p>
+        <p class="brödtext">* = Obligatoriska fält.</p>
 
         <form id="workexperienceForm">
-            <label for="companyname">Företagsnamn:</label><br>
+            <label for="companyname">*Företagsnamn:</label><br>
             <input type="text" id="companyname" name="companyname"><br>
-            <label for="jobtitle">Jobbtitel:</label><br>
+            <label for="jobtitle">*Jobbtitel:</label><br>
             <input type="text" id="jobtitle" name="jobtitle"><br>
-            <label for="location">Plats:</label><br>
+            <label for="location">*Plats:</label><br>
             <input type="text" id="location" name="location"><br>
-            <label for="startdate">Startdatum:</label><br>
+            <label for="startdate">*Startdatum:</label><br>
             <input type="date" id="startdate" name="startdate"><br>
             <label for="enddate">Slutdatum:</label><br>
             <input type="date" id="enddate" name="enddate"><br>
-            <label for="description">Beskrivning:</label><br>
+            <label for="description">*Beskrivning:</label><br>
             <textarea id="description" name="description"></textarea><br><br>
             <button type="button" id="submitBtn">Skicka</button>
         </form>
+        <div id="errorMsg"></div>
     </main>
 </body>
 
