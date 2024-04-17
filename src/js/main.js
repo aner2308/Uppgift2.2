@@ -60,3 +60,25 @@ async function deleteWorkexperience(id) {
         console.error("Error:", error);
     }
 }
+
+//Funktion för scroll to top-knappen
+//Länkar knappen till nytt element
+let myButtonEl = document.getElementById("myBtn");
+myButtonEl.addEventListener('click', topFunction)
+
+//Tar fram knappen när man scrollat ner 20px
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    myButtonEl.style.display = "block";
+  } else {
+    myButtonEl.style.display = "none";
+  }
+}
+
+//Går till toppen av sidan när användare klickar på knappen
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
