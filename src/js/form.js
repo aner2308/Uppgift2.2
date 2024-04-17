@@ -22,6 +22,7 @@ function submitForm() {
     const enddate = formData.get("enddate");
     const description = formData.get("description");
 
+    //Felmeddelande om något av de obligatoriska fälten inte är ifyllda
     if (!companyname.trim() || !jobtitle.trim() || !location.trim() || !startdate.trim() || !description.trim()) {
         errorMsgEl.innerText = "*Vänligen fyll i alla obligatoriska fält.";
         return;
