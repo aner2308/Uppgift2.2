@@ -3,6 +3,7 @@
 
 let url = "https://uppgift2-1.onrender.com/api/workexperience";
 
+//Länkar till knappen i formulär och lägger på event listener
 const submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click", submitForm)
 

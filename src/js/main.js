@@ -63,7 +63,7 @@ async function deleteWorkexperience(id) {
 
 //Funktion för scroll to top-knappen
 //Länkar knappen till nytt element
-let myButtonEl = document.getElementById("myBtn");
+let myButtonEl = document.getElementById("topBtn");
 myButtonEl.addEventListener('click', topFunction)
 
 //Tar fram knappen när man scrollat ner 20px
