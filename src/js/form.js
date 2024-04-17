@@ -23,7 +23,6 @@ function submitForm() {
     const description = formData.get("description");
 
     if (!companyname.trim() || !jobtitle.trim() || !location.trim() || !startdate.trim() || !description.trim()) {
-        console.log("Här saknas det något...")
         errorMsgEl.innerText = "*Vänligen fyll i alla obligatoriska fält.";
         return;
     } else {

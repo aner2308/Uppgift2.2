@@ -21,9 +21,9 @@ async function getData() {
             <h2>${workexperience.companyname}</h2>
             <p><strong>Jobbtitel:</strong> ${workexperience.jobtitle}</p>
             <p><strong>Plats:</strong> ${workexperience.location}</p>
-            <p><strong></strong> ${workexperience.startdate}</p>
-            <p><strong></strong> ${workexperience.enddate}</p>
-            <p><strong></strong> ${workexperience.description}</p>
+            <p><strong>Från:</strong> ${workexperience.startdate}</p>
+            <p><strong>Till:</strong> ${workexperience.enddate}</p>
+            <p><strong>Arbetsbeskrivning:</strong><br>${workexperience.description}</p>
             <button class="deleteBtn">Radera</button>
             `;
             workexperienceContainer.appendChild(article);
